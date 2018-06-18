@@ -1,0 +1,8 @@
+.ResultInput {
+  height: 100%;
+}
+
+.ResultInput ons-button {
+  margin: 5px;
+  width: 40%;
+}

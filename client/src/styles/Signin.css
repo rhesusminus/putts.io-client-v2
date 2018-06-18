@@ -1,0 +1,14 @@
+.Signin {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Signin ons-button {
+  text-align: center;
+  margin: 6px;
+}
+
+.Signin ons-input {
+  margin: 6px;
+}
