@@ -8,7 +8,7 @@ import { createBrowserHistory } from 'history'
 import { RouterModel, syncHistoryWithStore } from 'mst-react-router'
 import { stores } from './stores/stores'
 import { App } from './components'
-import { GamesModel, Game, User } from './models'
+import { GamesModel, Game } from './models'
 import 'onsenui/css/onsenui.css'
 import 'onsenui/css/onsen-css-components.css'
 
@@ -27,8 +27,6 @@ const rootStore = types
   )
   .named('RootStore')
   .create(initialState)
-
-console.log('rootStore:', rootStore)
 
 export const history = syncHistoryWithStore(createBrowserHistory(), routerModel)
 

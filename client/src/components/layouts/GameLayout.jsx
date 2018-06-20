@@ -5,9 +5,7 @@ import { GameList, GameDetails, Profile } from '../'
 const DashboardLayout = () => (
   <React.Fragment>
     <Switch>
-      <Route path="/dashboard" exact component={GameList} />
-      <Route path="/dashboard/game/:id" exact component={GameDetails} />
-      <Route path="/dashboard/profile" exact component={Profile} />
+      <Route path="/dashboard/game/1/play" exact component={GameDetails} />
       <Redirect to="/dashboard" />
     </Switch>
   </React.Fragment>

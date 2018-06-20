@@ -4,17 +4,17 @@ import { Input, Button } from 'react-onsenui'
 import '../styles/Signin.css'
 
 class Signin extends Component {
+  push = this.props.store.router.push
   state = {
     email: '',
     password: ''
   }
 
   handleSubmit = event => {
-    const { email, password } = this.state
     if (event) {
       event.preventDefault()
     }
-    // this.props.loginUser({ email, password })
+    this.push('/dashboard')
   }
 
   onPasswordKeyPress = event => {
@@ -32,13 +32,12 @@ class Signin extends Component {
   }
 
   render() {
-    const { email, password } = this.state
     return (
       <div className="Signin">
         <Input
           modifier="underbar"
           placeholder="Email"
-          value={email}
+          value={this.state.email}
           type="email"
           name="email"
           onChange={this.handleInputChange}
@@ -47,13 +46,13 @@ class Signin extends Component {
         <Input
           modifier="underbar"
           placeholder="Password"
-          value={password}
+          value={this.state.password}
           type="password"
           name="password"
           onChange={this.handleInputChange}
           onKeyPress={this.onPasswordKeyPress}
         />
-        <Button>Login</Button>
+        <Button onClick={() => this.handleSubmit()}>Login</Button>
         <Button>Register new user</Button>
       </div>
     )

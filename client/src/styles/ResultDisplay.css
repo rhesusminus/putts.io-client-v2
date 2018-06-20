@@ -1,0 +1,21 @@
+.ResultDisplay {
+  display: flex;
+  margin: 12px;
+  border: 1px solid goldenrod;
+  border-radius: 3px;
+}
+
+.ResultDisplay__main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  font-size: 400%;
+}
+
+.ResultDisplay__helper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid goldenrod;
+}

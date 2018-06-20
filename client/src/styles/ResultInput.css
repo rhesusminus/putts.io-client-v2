@@ -1,8 +1,17 @@
 .ResultInput {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   height: 100%;
+  height: 20em;
+  padding: 6px;
 }
 
 .ResultInput ons-button {
-  margin: 5px;
-  width: 40%;
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 12px);
+  margin: 6px;
 }
