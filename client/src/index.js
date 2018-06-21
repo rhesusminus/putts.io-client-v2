@@ -11,6 +11,7 @@ import { App } from './components'
 import { GamesModel, Game } from './models'
 import 'onsenui/css/onsenui.css'
 import 'onsenui/css/onsen-css-components.css'
+import './styles/index.css'
 
 const routerModel = RouterModel.create()
 

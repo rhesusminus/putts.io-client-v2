@@ -1,7 +1,8 @@
 .ResultDisplay {
+  background-color: white;
   display: flex;
   margin: 12px;
-  border: 1px solid goldenrod;
+  border: 1px solid black;
   border-radius: 3px;
 }
 
@@ -10,12 +11,32 @@
   justify-content: center;
   align-items: center;
   width: 80%;
-  font-size: 400%;
+  font-size: 450%;
+  height: 1.2em;
 }
 
 .ResultDisplay__helper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-left: 1px solid goldenrod;
+  width: 20%;
+  border-left: 1px solid black;
+}
+
+.ResultDisplay__helper-distance {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--hairline);
+  height: 50%;
+  width: 100%;
+}
+
+.ResultDisplay__helper-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 100%;
 }

@@ -1,13 +1,17 @@
 import React from 'react'
 import '../styles/ResultDisplay.css'
 
-const ResultDisplay = () => {
+const Input = ({ input }) => <div className="ResultDisplay__main">{input}</div>
+const Distance = ({ distance }) => <div className="ResultDisplay__helper-distance">{distance}</div>
+const Result = ({ result }) => <div className="ResultDisplay__helper-result">{result}</div>
+
+const ResultDisplay = ({ input, handleClick }) => {
   return (
     <div className="ResultDisplay">
-      <div className="ResultDisplay__main">123</div>
+      <Input input={input} />
       <div className="ResultDisplay__helper">
-        10 m<br />
-        4/20
+        <Distance distance="10 m" />
+        <Result result="4/20" />
       </div>
     </div>
   )
