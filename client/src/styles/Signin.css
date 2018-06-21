@@ -2,6 +2,8 @@
   padding: 12px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .Signin ons-button {

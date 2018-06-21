@@ -52,7 +52,7 @@ class Signin extends Component {
           onChange={this.handleInputChange}
           onKeyPress={this.onPasswordKeyPress}
         />
-        <Button onClick={() => this.handleSubmit()}>Login</Button>
+        <Button onClick={this.handleSubmit}>Login</Button>
         <Button>Register new user</Button>
       </div>
     )
