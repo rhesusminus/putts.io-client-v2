@@ -8,5 +8,18 @@
 }
 
 .Game1__resultInput {
+  display: flex;
+  flex-direction: row;
   flex-grow: 1;
+  flex-wrap: wrap;
+  padding: 6px;
+}
+
+.Game1__resultInput ons-button {
+  font-size: 200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(50% - 12px);
+  margin: 6px;
 }

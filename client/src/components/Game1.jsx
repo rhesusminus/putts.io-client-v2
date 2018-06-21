@@ -4,20 +4,18 @@ import '../styles/Game1.css'
 
 class Game1 extends React.Component {
   state = {
-    distance: null,
-    result: '',
+    distance: '10 m',
+    result: '4/20',
     input: ''
   }
 
   handleClick = event => this.setState({ input: event.target.innerHTML })
 
   render() {
-    const { distance, result, input } = this.state
-
     return (
       <div className="Game1">
         <div className="Game1__resultDisplay">
-          <ResultDisplay input={input} />
+          <ResultDisplay {...this.state} />
         </div>
         <div className="Game1__resultInput">
           <ResultInput handleClick={this.handleClick} />
