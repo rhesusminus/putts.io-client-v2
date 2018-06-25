@@ -1,5 +1,3 @@
-import ons from 'onsenui'
-
 export { default as iosArrowRoundBack } from './ios-arrow-round-back.svg'
 export { default as mdArrowRoundBack } from './md-arrow-round-back.svg'
 export { default as iosMenu } from './ios-menu.svg'
