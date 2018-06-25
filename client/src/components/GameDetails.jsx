@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { getSnapshot } from 'mobx-state-tree'
-import { Route } from 'react-router-dom'
 import { Button } from 'react-onsenui'
-import { Game1 } from './'
 import '../styles/GameDetails.css'
 
 class GameDetails extends Component {

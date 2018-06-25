@@ -15,11 +15,19 @@ class GameList extends Component {
     this.push(`/dashboard/game/${id}`)
   }
 
-  renderRow = game => (
-    <ListItem key={game.id} onClick={() => this.handleGameSelection(game.id)}>
-      {game.name}
-    </ListItem>
-  )
+  renderRow = game => {
+    const x = 40 + Math.round(5 * (Math.random() - 0.5))
+    const y = 40 + Math.round(5 * (Math.random() - 0.5))
+
+    return (
+      <ListItem key={game.id} onClick={() => this.handleGameSelection(game.id)}>
+        <div className="left">
+          <img src={`http://placekitten.com/g/${x}/${y}`} alt="game" style={{ borderRadius: '4px' }} />
+        </div>
+        <div className="center">{game.name}</div>
+      </ListItem>
+    )
+  }
 
   render() {
     const gameList = getSnapshot(this.props.store.list)

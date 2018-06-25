@@ -1,13 +1,14 @@
 import React from 'react'
-import { Route, Redirect, withRouter } from 'react-router-dom'
+import { Route, withRouter } from 'react-router-dom'
 import { inject, observer } from 'mobx-react'
-import { GameList, GameDetails, Profile, Game1, DashboardToolbar } from '../'
+import { GameList, GameDetails, Profile, Game1, AppToolbar } from '../'
 import { Page, Splitter, SplitterSide, List, ListItem, SplitterContent } from 'react-onsenui'
 
 class DashboardLayout extends React.Component {
   push = this.props.store.router.push
 
   state = {
+    toolbarType: '',
     menuIsOpen: false
   }
 
@@ -38,8 +39,6 @@ class DashboardLayout extends React.Component {
   }
 
   render() {
-    const { menuIsOpen } = this.state
-
     return (
       <Splitter>
         <SplitterSide
@@ -47,7 +46,7 @@ class DashboardLayout extends React.Component {
           width={200}
           collapse={true}
           swipeable={true}
-          isOpen={menuIsOpen}
+          isOpen={this.state.menuIsOpen}
           onClose={this.closeMenu}
           onOpen={this.openMenu}
         >
@@ -63,7 +62,7 @@ class DashboardLayout extends React.Component {
           </Page>
         </SplitterSide>
         <SplitterContent>
-          <Page renderToolbar={() => <DashboardToolbar openMenu={this.openMenu} />}>
+          <Page renderToolbar={() => <AppToolbar openMenu={this.openMenu} type="game" />}>
             <Route path="/dashboard" exact component={GameList} />
             <Route path="/dashboard/game/:id" exact component={GameDetails} />
             <Route path="/dashboard/game/1/play" component={Game1} />

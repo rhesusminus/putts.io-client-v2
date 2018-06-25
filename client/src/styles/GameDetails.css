@@ -1,5 +1,4 @@
 .GameDetails {
-  padding: 12px;
 }
 
 .GameDetails__header {
@@ -15,6 +14,7 @@
 }
 
 .GameDetails__desc {
+  padding: 12px;
   color: black;
 }
 
